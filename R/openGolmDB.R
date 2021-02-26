@@ -7,6 +7,10 @@
 openGolmDB <- function(GolmInput)
 {
 
+  if(!file.exists(GolmInput)) {
+    stop('No file found at ', deparse(substitute(GolmInput)), call. = FALSE)
+  }
+
   Golm <- readLines(GolmInput)
 
   spidx <- cumsum(Golm == '')
@@ -25,6 +29,11 @@ openGolmDB <- function(GolmInput)
   object@source <- basename(GolmInput)
 
   object@accessions <- purrr::map(GolmSplit, fillAccessionObject)
+
+  index <- purrr::map_chr(object@accessions, ~{.@name})
+
+  object@index <- tibble::tibble(name = index, position = seq(from = 1, to = length(index)))
+
 
   return(object)
 }
