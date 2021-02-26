@@ -7,7 +7,7 @@
 openGolmDB(GolmInput)
 }
 \arguments{
-\item{GolmInput}{a Golm database file in `MSP` format}
+\item{GolmInput}{a valid file path for a Golm database file in `MSP` format}
 }
 \value{
 a `GolmDatabase` object

@@ -3,9 +3,9 @@
 \docType{class}
 \name{GolmAccession-class}
 \alias{GolmAccession-class}
-\title{Golm Database Class}
+\title{Golm Accession Class}
 \description{
-Golm Database Class
+Golm Accession Class
 }
 \section{Slots}{
 
