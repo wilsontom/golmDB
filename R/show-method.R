@@ -1,6 +1,6 @@
 #' show-GolmAccession
 #' @rdname show
-#' @param a `GolmAccession` object
+#' @param object a `GolmAccession` object
 #' @importFrom methods show
 #' @export
 
@@ -36,8 +36,7 @@ setMethod('show', signature = 'GolmAccession',
 
 #' show-GolmDB
 #' @rdname show
-#' @param a `GolmDB` object
-#' @importFrom methods show
+#' @param object a `GolmDB` object
 #' @export
 
 setMethod('show', signature = 'GolmDB',

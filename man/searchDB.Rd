@@ -2,20 +2,20 @@
 % Please edit documentation in R/allGenerics.R, R/searchDB-method.R
 \name{searchDB}
 \alias{searchDB}
-\alias{searchDB,golmDB-method}
+\alias{searchDB,GolmDB-method}
 \title{Search Database}
 \usage{
 searchDB(object, pattern)
 
-\S4method{searchDB}{golmDB}(object, pattern)
+\S4method{searchDB}{GolmDB}(object, pattern)
 }
 \arguments{
-\item{object}{a `golmDB` S4 class}
+\item{object}{a `GolmDB` S4 class}
 
 \item{pattern}{a character string to search for}
 }
 \value{
-a `golmDB` class containing on the accessions which matched the search pattern
+a `GolmDB` class containing on the accessions which matched the search pattern
 }
 \description{
 Search Database
