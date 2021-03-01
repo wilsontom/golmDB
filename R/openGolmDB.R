@@ -34,6 +34,8 @@ openGolmDB <- function(GolmInput)
 
   object@index <- tibble::tibble(name = index, position = seq(from = 1, to = length(index)))
 
+  object <- object %>% cleanNames()
+
 
   return(object)
 }
