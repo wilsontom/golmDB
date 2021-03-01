@@ -10,10 +10,10 @@ cleanNames(object)
 \S4method{cleanNames}{GolmDB}(object)
 }
 \arguments{
-\item{object}{a `GolmDB` S4 class}
+\item{object}{a \code{GolmDB} S4 class}
 }
 \value{
-a `GolmDB` class
+a \code{GolmDB} class
 }
 \description{
 Clean Accession Names

@@ -30,3 +30,4 @@ Collate:
     'openGolmDB.R'
     'searchDB-method.R'
     'show-method.R'
+Roxygen: list(markdown = TRUE)

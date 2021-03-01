@@ -10,7 +10,7 @@
 \S4method{show}{GolmDB}(object)
 }
 \arguments{
-\item{object}{a `GolmDB` object}
+\item{object}{a \code{GolmDB} object}
 }
 \description{
 show-GolmAccession

@@ -7,10 +7,10 @@
 findIdentifier(object)
 }
 \arguments{
-\item{object}{a `GolmAccession` object}
+\item{object}{a \code{GolmAccession} object}
 }
 \value{
-a `GolmAccession` object
+a \code{GolmAccession} object
 }
 \description{
 Find Compound Identifier

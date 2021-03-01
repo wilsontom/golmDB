@@ -10,7 +10,7 @@ fillAccessionObject(x)
 \item{x}{a list element from a split Golm database}
 }
 \value{
-a `GolmAccession` object
+a \code{GolmAccession} object
 }
 \description{
 Create Accession Object

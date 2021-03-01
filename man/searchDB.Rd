@@ -10,12 +10,12 @@ searchDB(object, pattern)
 \S4method{searchDB}{GolmDB}(object, pattern)
 }
 \arguments{
-\item{object}{a `GolmDB` S4 class}
+\item{object}{a \code{GolmDB} S4 class}
 
 \item{pattern}{a character string to search for}
 }
 \value{
-a `GolmDB` class containing on the accessions which matched the search pattern
+a \code{GolmDB} class containing on the accessions which matched the search pattern
 }
 \description{
 Search Database
