@@ -3,6 +3,7 @@
 export(fillAccessionObject)
 export(findIdentifier)
 export(openGolmDB)
+exportMethods(cleanNames)
 exportMethods(searchDB)
 exportMethods(show)
 importFrom(methods,show)

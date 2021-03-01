@@ -24,6 +24,7 @@ Suggests:
 Collate: 
     'allClasses.R'
     'allGenerics.R'
+    'cleanNames.R'
     'fillAccessionObject.R'
     'findIdentifier.R'
     'openGolmDB.R'
