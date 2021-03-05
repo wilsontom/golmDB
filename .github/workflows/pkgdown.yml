@@ -45,4 +45,5 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          Rscript -e "pkgdown:::deploy_local(new_process = FALSE, remote_url = 'https://x-access-token:${{secrets.GH_TOKEN}}@github.com/${{github.repository}}.git')"
+          Rscript -e 'pkgdown::build_site(preview = FALSE)'
+          Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
