@@ -1,0 +1,74 @@
+---
+title: "Introduction to golmDB"
+author:
+  - name: Thomas Wilson
+    affiliation: Institute of Biological, Environmental & Rural Sciences (IBERS), Aberystwyth University, UK
+    email: tpw2@aber.ac.uk
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_to_golmDB}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+The Golm Metabolome Database is a collection of reference mass spectra from biologically active metabolites that have been quantified using Gas Chromatography (GC) Mass Spectrometry (MS). The `golmDB` package provides a simple method to parse the Golm database, so it can be easily used in downstream processing pipelines. 
+
+## Installation
+
+`golmDB` can be installed directly from GitHub using the `remotes` package. 
+
+```{r, install, echo=TRUE, eval=FALSE}
+remotes::install_github('wilsontom/golmDB')
+```
+
+## Creating a golmDB object
+
+Before creating a new `golmDB` object, you first need to download the version of Golm that you require. All the different Golm database files can be downloaded [here](http://gmd.mpimp-golm.mpg.de/download/). `golmDB` requires the database to be downloaded in the **MSP** format. 
+
+Once you have the Golm database file, you can create a new `golmDB` object by using the `openGolmDB` function with the path of the database file. 
+
+```{r, open, echo=TRUE, eval=TRUE}
+library(golmDB)
+
+GolmDB_MDN35 <-
+  openGolmDB('../inst/extdata/GMD_20111121_MDN35_FAME_MSP.txt')
+
+GolmDB_MDN35
+```
+
+`golmDB` utilises two separate S4 classes. The `GolmDB` class contains the entire database; where each database accession is stored in it's own `GolmAccession` class. The `GolmDB` accession slot, is large list of `GolmAccession` objects. 
+
+
+```{r, slots, echo=TRUE, eval=TRUE}
+slotNames(GolmDB_MDN35)
+
+length(GolmDB_MDN35@accessions)
+
+GolmDB_MDN35@accessions[[1]]
+
+```
+
+
+## Search Database
+
+The `searchDB` method can be used to create smaller database objects, based on the results of searching for a particular pattern. For example, if you are only interested in Fatty Acid Methyl Esters then you can use 'methyl esters' as a search pattern. 
+
+```{r searchDB, echo=TRUE, eval=TRUE}
+GolmDB_FAME <- searchDB(GolmDB_MDN35, pattern = 'methyl ester')
+
+GolmDB_FAME
+```
+
+
+
+
+

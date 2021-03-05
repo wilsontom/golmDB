@@ -20,7 +20,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 Collate: 
     'allClasses.R'
     'allGenerics.R'
@@ -31,3 +33,4 @@ Collate:
     'searchDB-method.R'
     'show-method.R'
 Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
