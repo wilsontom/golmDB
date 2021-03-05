@@ -8,4 +8,4 @@
 
 Install directly from GitHub using the `remotes` package.
 
-`R remotes::install_github('wilsontom/golmDB')`
+`remotes::install_github('wilsontom/golmDB')`
